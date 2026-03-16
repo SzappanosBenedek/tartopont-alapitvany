@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lépjen kapcsolatba a TartóPont Alapítvánnyal Budapesten. Elérhetőségek, üzenetküldés és térkép. Segítünk fogyatékkal élő gyermeket nevelő családoknak.">
+    <meta name="keywords"
+        content="kapcsolat, TartóPont Alapítvány cím, elérhetőség, adományozás, segítségkérés Budapest">
+    <meta name="robots" content="index, follow">
+    <title>Kapcsolat - Lépjen Velünk Kapcsolatba - TartóPont Alapítvány Budapest</title>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nimble-stroopwafel-a2c104.netlify.app/contact.html">
+    <meta property="og:title" content="Kapcsolat - TartóPont Alapítvány">
+    <meta property="og:description" content="Keressen minket bizalommal kérdéseivel vagy támogatási szándékával.">
+    <meta property="og:image" content="https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo-full.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kapcsolat - TartóPont Alapítvány">
+    <meta name="twitter:description" content="Elérhetőségeink és kapcsolatfelvétel a TartóPont Alapítvánnyal.">
+    <meta name="twitter:image" content="https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo-full.png">
+
+    <link rel="canonical" href="https://nimble-stroopwafel-a2c104.netlify.app/contact.html">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "TartóPont Alapítvány",
+          "image": "https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo-full.png",
+          "@id": "https://nimble-stroopwafel-a2c104.netlify.app/",
+          "url": "https://nimble-stroopwafel-a2c104.netlify.app/contact.html",
+          "telephone": "+36301234567",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Példa utca 1.",
+            "addressLocality": "Budapest",
+            "postalCode": "1051",
+            "addressCountry": "HU"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.4979,
+            "longitude": 19.0402
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+             "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+36301234567",
+            "contactType": "customer support",
+            "areaServed": "HU",
+            "availableLanguage": "Hungarian"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Főoldal",
+            "item": "https://nimble-stroopwafel-a2c104.netlify.app/"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kapcsolat",
+            "item": "https://nimble-stroopwafel-a2c104.netlify.app/contact.html"
+          }]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="TartóPont Alapítvány" style="height: 60px; width: auto;">
+                    <span class="logo-text">TartóPont Alapítvány</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menü megnyitása">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                    <li><a href="about.html" class="nav-link">Rólunk</a></li>
+                    <li><a href="index.html#services" class="nav-link">Szolgáltatásaink</a></li>
+                    <li><a href="index.html#media" class="nav-link">Média</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kapcsolat</a></li>
+                    <li><a href="index.html#support" class="btn btn-secondary">Támogatás</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 300px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kapcsolat</h1>
+                <p class="hero-description">
+                    Kérdése van? Szeretne velünk kapcsolatba lépni? Írjon nekünk bizalommal!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="two-column">
+                <!-- Contact Form -->
+                <div>
+                    <h2>Írjon nekünk</h2>
+                    <p class="mb-2">
+                        Töltse ki az alábbi űrlapot, és munkatársunk hamarosan felveszi Önnel a kapcsolatot.
+                    </p>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Név *</label>
+                            <input type="text" id="name" name="name" class="form-input" required
+                                placeholder="Teljes név">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email cím *</label>
+                            <input type="email" id="email" name="email" class="form-input" required
+                                placeholder="pelda@email.hu">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefonszám</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+36 XX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Üzenet *</label>
+                            <textarea id="message" name="message" class="form-textarea" required
+                                placeholder="Írja le kérdését vagy üzenetét..."></textarea>
+                        </div>
+
+                        <div class="form-checkbox mb-2">
+                            <input type="checkbox" id="gdprContact" required>
+                            <label for="gdprContact">
+                                Elfogadom az adatkezelési tájékoztatót és hozzájárulok adataim kezeléséhez. *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Üzenet küldése</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2>Elérhetőségeink</h2>
+
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <h3>Email</h3>
+                        <p>
+                            <a href="mailto:info@tartopontalapitvany.hu"
+                                style="color: var(--color-primary-blue); font-weight: 600;">
+                                info@tartopontalapitvany.hu
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <h3>Telefon</h3>
+                        <p style="font-weight: 600;">+36 XX XXX XXXX</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light);">
+                            Hétfő - Péntek: 9:00 - 17:00
+                        </p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: var(--spacing-md);">
+                        <h3>Székhely</h3>
+                        <p>
+                            XXXX Budapest<br>
+                            Példa utca XX.<br>
+                            1XXX
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Közösségi média</h3>
+                        <div class="social-icons" style="justify-content: center;">
+                            <a href="#" class="social-icon" aria-label="Facebook"
+                                style="background-color: var(--color-primary-blue);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram"
+                                style="background-color: var(--color-accent-orange);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="YouTube" style="background-color: #FF0000;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center mb-2">Térkép</h2>
+            <div
+                style="background-color: var(--color-bg-card); border-radius: var(--radius-lg); padding: var(--spacing-xl); text-align: center; box-shadow: var(--shadow-sm);">
+                <p style="color: var(--color-text-medium); font-size: 1.1rem;">
+                    <strong>Google Maps Térkép</strong><br>
+                    <span style="font-size: 0.9rem;">(A pontos cím megadása után beágyazható)</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-section">
+                    <div
+                        style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo.png" alt="TartóPont Alapítvány" style="height: 80px; width: auto;">
+                        <h4 style="margin: 0;">TartóPont Alapítvány</h4>
+                    </div>
+                    <p>
+                        Megtartó támogatás különleges családoknak. Komplex segítség fogyatékkal élő,
+                        SNI, tartósan beteg gyermeket nevelő családoknak.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-section">
+                    <h4>Gyors linkek</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Főoldal</a>
+                        <a href="about.html">Rólunk</a>
+                        <a href="index.html#services">Szolgáltatásaink</a>
+                        <a href="index.html#media">Média</a>
+                        <a href="contact.html">Kapcsolat</a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-section">
+                    <h4>Kapcsolat</h4>
+                    <p><strong>Email:</strong> info@tartopontalapitvany.hu</p>
+                    <p><strong>Telefon:</strong> +36 XX XXX XXXX</p>
+                    <p><strong>Cím:</strong> Budapest, Magyarország</p>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-section">
+                    <h4>Hírlevél</h4>
+                    <p>Ne maradj le híreinkről és programjainkról!</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Email cím" required
+                            aria-label="Email cím">
+                        <button type="submit" class="newsletter-btn">Feliratkozom</button>
+                    </form>
+                    <div class="form-checkbox mt-1">
+                        <input type="checkbox" id="gdprConsent" required>
+                        <label for="gdprConsent">Elfogadom az adatkezelési tájékoztatót</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 TartóPont Alapítvány. Minden jog fenntartva.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Adatvédelmi nyilatkozat</a>
+                    <a href="#">ÁSZF</a>
+                    <a href="#">Impresszum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

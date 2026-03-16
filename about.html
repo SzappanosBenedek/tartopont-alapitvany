@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ismerje meg a TartóPont Alapítvány küldetését és csapatát. Hiteles információk, beszámolók és az alapítvány hivatalos adatai egy helyen.">
+    <meta name="keywords"
+        content="TartóPont Alapítvány, alapítvány rólunk, alapító okirat, közhasznúsági beszámoló, alapítvány adatai">
+    <meta name="robots" content="index, follow">
+    <title>Rólunk - Küldetésünk és Csapatunk - TartóPont Alapítvány</title>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nimble-stroopwafel-a2c104.netlify.app/about.html">
+    <meta property="og:title" content="Rólunk - TartóPont Alapítvány">
+    <meta property="og:description"
+        content="Ismerje meg a TartóPont Alapítvány küldetését, céljait és hivatalos adatait.">
+    <meta property="og:image" content="https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo-full.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rólunk - TartóPont Alapítvány">
+    <meta name="twitter:description" content="Információk a TartóPont Alapítványról és tevékenységéről.">
+    <meta name="twitter:image" content="https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo-full.png">
+
+    <link rel="canonical" href="https://nimble-stroopwafel-a2c104.netlify.app/about.html">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "TartóPont Alapítvány",
+          "url": "https://nimble-stroopwafel-a2c104.netlify.app/",
+          "logo": "https://nimble-stroopwafel-a2c104.netlify.app/assets/images/logo.png"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Főoldal",
+            "item": "https://nimble-stroopwafel-a2c104.netlify.app/"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Rólunk",
+            "item": "https://nimble-stroopwafel-a2c104.netlify.app/about.html"
+          }]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="assets/images/logo.png" alt="TartóPont Alapítvány" style="height: 60px; width: auto;">
+                    <span class="logo-text">TartóPont Alapítvány</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menü megnyitása">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Főoldal</a></li>
+                    <li><a href="about.html" class="nav-link active">Rólunk</a></li>
+                    <li><a href="index.html#services" class="nav-link">Szolgáltatásaink</a></li>
+                    <li><a href="index.html#media" class="nav-link">Média</a></li>
+                    <li><a href="contact.html" class="nav-link">Kapcsolat</a></li>
+                    <li><a href="index.html#support" class="btn btn-secondary">Támogatás</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 300px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Alapítvány Adatai</h1>
+                <p class="hero-description">
+                    Hivatalos információk és adatok a TartóPont Alapítványról
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Account Section -->
+    <section class="section" id="bank-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Támogatás Bankszámlaszáma</h2>
+            </div>
+
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="card"
+                    style="background: linear-gradient(135deg, var(--color-primary-blue), var(--color-primary-green)); color: white; text-align: center; padding: var(--spacing-lg);">
+                    <h3 style="color: white; font-size: 1.2rem; margin-bottom: var(--spacing-sm);">
+                        Bankszámlaszám
+                    </h3>
+                    <div
+                        style="background-color: rgba(255, 255, 255, 0.2); border-radius: var(--radius-md); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+                        <p id="bankAccount"
+                            style="font-size: 1.75rem; font-weight: 700; letter-spacing: 2px; color: white; margin: 0;">
+                            XXXXX-XXXXX-XXXXXXXX
+                        </p>
+                    </div>
+                    <button id="copyBankBtn" class="btn btn-outline"
+                        style="background-color: white; color: var(--color-primary-blue); border: none;"
+                        onclick="copyBankAccount()">
+                        Másolás vágólapra
+                    </button>
+                    <p style="font-size: 0.9rem; margin-top: var(--spacing-sm); color: rgba(255, 255, 255, 0.9);">
+                        Adományával segíthet munkánkban. Köszönjük!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Information Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hivatalos Adatok</h2>
+            </div>
+
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card">
+                    <h3>Hivatalos Név</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark);">
+                        TartóPont Alapítvány
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Adószám</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark);">
+                        XXXXXXXX-X-XX
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Bejegyzési Szám</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark);">
+                        XX-XX-XXXXXX
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Székhely</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark);">
+                        XXXX Budapest<br>
+                        Példa utca XX.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Képviselő</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark);">
+                        [Név]<br>
+                        <span style="font-size: 0.9rem; font-weight: 400;">Kuratórium Elnöke</span>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Alapítás Éve</h3>
+                    <p style="font-weight: 600; color: var(--color-text-dark); font-size: 2rem;">
+                        20XX
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dokumentumok</h2>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: var(--spacing-md);">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                        <div>
+                            <h3>Közhasznúsági Beszámoló</h3>
+                            <p>Éves beszámoló az alapítvány tevékenységéről és gazdálkodásáról</p>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="white-space: nowrap;">
+                            Letöltés
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-bottom: var(--spacing-md);">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                        <div>
+                            <h3>Alapító Okirat</h3>
+                            <p>Az alapítvány hivatalos alapító dokumentuma</p>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="white-space: nowrap;">
+                            Letöltés
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                        <div>
+                            <h3>Adatkezelési Tájékoztató</h3>
+                            <p>GDPR-kompatibilis adatvédelmi szabályzat</p>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="white-space: nowrap;">
+                            Letöltés
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Recap -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Küldetésünk</h2>
+            </div>
+            <div class="text-center">
+                <p class="text-large" style="max-width: 900px; margin: 0 auto;">
+                    A TartóPont Alapítvány azért jött létre, hogy komplex és valódi támogatást nyújtson
+                    azoknak a családoknak, akik fogyatékkal élő, sajátos nevelési igényű (SNI), tartósan
+                    beteg vagy különleges figyelmet igénylő gyermeket nevelnek. Hiszünk abban, hogy a
+                    családokat mint egészet kell támogatni, mert csak egy erős, kiegyensúlyozott szülő
+                    tud hosszú távon jelen lenni gyermeke mellett.
+                </p>
+                <div class="btn-group mt-3" style="justify-content: center;">
+                    <a href="index.html" class="btn btn-primary">Vissza a főoldalra</a>
+                    <a href="contact.html" class="btn btn-outline">Kapcsolatfelvétel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-section">
+                    <div
+                        style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo.png" alt="TartóPont Alapítvány" style="height: 80px; width: auto;">
+                        <h4 style="margin: 0;">TartóPont Alapítvány</h4>
+                    </div>
+                    <p>
+                        Megtartó támogatás különleges családoknak. Komplex segítség fogyatékkal élő,
+                        SNI, tartósan beteg gyermeket nevelő családoknak.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-section">
+                    <h4>Gyors linkek</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Főoldal</a>
+                        <a href="about.html">Rólunk</a>
+                        <a href="index.html#services">Szolgáltatásaink</a>
+                        <a href="index.html#media">Média</a>
+                        <a href="contact.html">Kapcsolat</a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-section">
+                    <h4>Kapcsolat</h4>
+                    <p><strong>Email:</strong> info@tartopontalapitvany.hu</p>
+                    <p><strong>Telefon:</strong> +36 XX XXX XXXX</p>
+                    <p><strong>Cím:</strong> Budapest, Magyarország</p>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-section">
+                    <h4>Hírlevél</h4>
+                    <p>Ne maradj le híreinkről és programjainkról!</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Email cím" required
+                            aria-label="Email cím">
+                        <button type="submit" class="newsletter-btn">Feliratkozom</button>
+                    </form>
+                    <div class="form-checkbox mt-1">
+                        <input type="checkbox" id="gdprConsent" required>
+                        <label for="gdprConsent">Elfogadom az adatkezelési tájékoztatót</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 TartóPont Alapítvány. Minden jog fenntartva.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Adatvédelmi nyilatkozat</a>
+                    <a href="#">ÁSZF</a>
+                    <a href="#">Impresszum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nimble-stroopwafel-a2c104.netlify.app/sitemap.xml
