@@ -11,9 +11,16 @@
     <meta name="author" content="TartóPont Alapítvány">
     <title>TartóPont Alapítvány - Támogatás Fogyatékkal Élő Gyermeket Nevelő Családoknak - Budapest</title>
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="icon" id="favicon" href="/favicon.ico?v=3" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico?v=3" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/favicon.png?v=3">
+    <script>
+      (function() {
+        var ts = new Date().getTime();
+        var el = document.getElementById('favicon');
+        if (el) el.href = '/favicon.ico?' + ts;
+      })();
+    </script>
     
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website">
