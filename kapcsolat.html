@@ -146,11 +146,6 @@
                     </p>
 
                     <form id="contactForm" onsubmit="handleFormSubmit(event)">
-                        <!-- Web3Forms hidden fields -->
-                        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_KEY">
-                        <input type="hidden" name="subject" value="Új üzenet a TartóPont Alapítvány honlapjáról">
-                        <input type="hidden" name="from_name" value="TartóPont Alapítvány weboldal">
-                        <input type="hidden" name="redirect" value="false">
 
                         <div class="form-group">
                             <label for="name" class="form-label">Név *</label>
@@ -197,23 +192,29 @@
                         result.style.display = 'none';
 
                         const form = e.target;
-                        const data = new FormData(form);
+                        const data = {
+                            name: form.name.value,
+                            email: form.email.value,
+                            phone: form.phone.value,
+                            message: form.message.value
+                        };
 
                         try {
-                            const response = await fetch('https://api.web3forms.com/submit', {
+                            const response = await fetch('/api/contact', {
                                 method: 'POST',
-                                body: data
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(data)
                             });
                             const json = await response.json();
 
-                            if (json.success) {
+                            if (response.ok && json.success) {
                                 result.style.display = 'block';
                                 result.style.backgroundColor = '#d1fae5';
                                 result.style.color = '#065f46';
                                 result.textContent = '✓ Köszönjük! Üzenetét megkaptuk, hamarosan felvesszük Önnel a kapcsolatot.';
                                 form.reset();
                             } else {
-                                throw new Error(json.message);
+                                throw new Error(json.error || 'Ismeretlen hiba');
                             }
                         } catch (err) {
                             result.style.display = 'block';
