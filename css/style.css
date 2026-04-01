@@ -184,6 +184,17 @@ p {
     transition: all var(--transition-normal);
 }
 
+/* Offset anchor scroll for sticky header */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+    section[id] {
+        scroll-margin-top: 75px;
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
