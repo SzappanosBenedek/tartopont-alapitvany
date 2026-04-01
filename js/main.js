@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             menuToggle.setAttribute('aria-expanded', isExpanded);
         });
 
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('.nav-link');
+        // Close menu when clicking on any link inside the nav
+        const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', function () {
                 navMenu.classList.remove('active');

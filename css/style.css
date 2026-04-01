@@ -251,19 +251,46 @@ section[id] {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: var(--spacing-xs);
+    padding: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
+    z-index: 1100;
+    position: relative;
+}
+
+.menu-toggle:hover {
+    background: var(--color-bg-light);
 }
 
 .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-text-dark);
-    border-radius: 2px;
-    transition: all var(--transition-fast);
+    display: block;
+    width: 28px;
+    height: 2.5px;
+    background: linear-gradient(90deg, var(--color-primary-blue), var(--color-accent-peach));
+    border-radius: 3px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
 }
 
 /* ===================================
@@ -806,37 +833,91 @@ section[id] {
 
     .nav-menu {
         position: fixed;
-        top: 70px;
-        left: -100%;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--color-white);
+        height: 100dvh;
+        background: linear-gradient(160deg,
+            rgba(93, 173, 226, 0.97) 0%,
+            rgba(139, 195, 74, 0.95) 50%,
+            rgba(217, 70, 168, 0.95) 100%);
+        backdrop-filter: blur(10px);
         flex-direction: column;
-        align-items: flex-start;
-        padding: var(--spacing-md);
-        box-shadow: var(--shadow-lg);
-        transition: left var(--transition-normal);
-        gap: var(--spacing-sm);
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+        z-index: 1050;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(1.04);
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-menu.active {
-        left: 0;
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .nav-menu li:first-child {
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .nav-menu .nav-link {
+        display: block;
+        width: 100%;
+        padding: 1.15rem 2rem;
+        font-size: 1.35rem;
+        font-family: var(--font-secondary);
+        font-weight: 700;
+        color: rgba(255,255,255,0.92);
+        letter-spacing: 0.03em;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .nav-menu .nav-link:hover,
+    .nav-menu .nav-link.active {
+        background: rgba(255,255,255,0.15);
+        color: #fff;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+        margin-top: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .nav-menu .btn.btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+        font-family: var(--font-secondary);
+        font-weight: 700;
+        padding: 1rem 2rem;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.6);
+        border-radius: var(--radius-md);
+        box-shadow: none;
+        letter-spacing: 0.04em;
+    }
+
+    .nav-menu .btn.btn-secondary:hover {
+        background: rgba(255,255,255,0.35);
     }
 
     .menu-toggle {
         display: flex;
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(7px, 7px);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+        position: relative;
+        z-index: 1100;
     }
 
     .btn-group {
