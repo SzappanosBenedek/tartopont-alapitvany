@@ -1,9 +1,24 @@
-// ===================================
-// TartóPont Alapítvány - Main JavaScript
-// ===================================
-
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
+
+    // ===================================
+    // Instant Hash Anchor Navigation
+    // Prevents flash-to-top on anchor links
+    // ===================================
+    (function () {
+        const hash = window.location.hash;
+        if (hash) {
+            const target = document.querySelector(hash);
+            const headerEl = document.querySelector('.header');
+            const headerHeight = headerEl ? headerEl.offsetHeight : 80;
+            if (target) {
+                // Scroll instantly before any paint
+                window.scrollTo(0, target.offsetTop - headerHeight - 10);
+            }
+        }
+        // Reveal the page (removes hash-nav opacity:0 class)
+        document.documentElement.classList.remove('hash-nav');
+    })();
 
     // ===================================
     // Mobile Menu Toggle
